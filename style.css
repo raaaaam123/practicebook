@@ -1,0 +1,313 @@
+/* ========================================
+   BookNest — Premium Digital Bookstore
+   Custom Styles
+   ======================================== */
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Selection */
+::selection {
+    background: rgba(217, 70, 239, 0.3);
+    color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #020617;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #d946ef, #a21caf);
+    border-radius: 999px;
+}
+
+/* ========== HAMBURGER MENU ========== */
+.hamburger-lines {
+    width: 22px;
+    height: 14px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-lines .line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #e2e8f0;
+    border-radius: 999px;
+    transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    transform-origin: center;
+}
+
+.hamburger-lines .line-1 {
+    transform: translateY(0) rotate(0);
+}
+.hamburger-lines .line-2 {
+    opacity: 1;
+    transform: scaleX(1);
+}
+.hamburger-lines .line-3 {
+    transform: translateY(0) rotate(0);
+}
+
+/* Active Hamburger */
+#menuBtn.active .line-1 {
+    transform: translateY(6px) rotate(45deg);
+    background: #e879f9;
+}
+#menuBtn.active .line-2 {
+    opacity: 0;
+    transform: scaleX(0);
+}
+#menuBtn.active .line-3 {
+    transform: translateY(-6px) rotate(-45deg);
+    background: #e879f9;
+}
+
+/* ========== MOBILE MENU ========== */
+.mobile-menu {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease;
+}
+
+.mobile-menu.open {
+    max-height: 400px;
+    opacity: 1;
+}
+
+/* ========== NAVBAR ========== */
+#navbar {
+    background: transparent;
+    backdrop-filter: none;
+    border-bottom: 1px solid transparent;
+}
+
+#navbar.scrolled {
+    background: rgba(2, 6, 23, 0.85);
+    backdrop-filter: blur(20px) saturate(1.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ========== HERO GRID ========== */
+.hero-grid {
+    background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes pulse-slow {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.05); }
+}
+.animate-pulse-slow {
+    animation: pulse-slow 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(2deg); }
+    66% { transform: translateY(5px) rotate(-1deg); }
+}
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s ease forwards;
+}
+
+@keyframes scroll-dot {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(12px); opacity: 0; }
+}
+.animate-scroll-dot {
+    animation: scroll-dot 1.5s ease-in-out infinite;
+}
+
+/* ========== SCROLL REVEAL ========== */
+[data-animate] {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-animate="fade-up"] {
+    transform: translateY(40px);
+}
+
+[data-animate="fade-right"] {
+    transform: translateX(-40px);
+}
+
+[data-animate="fade-left"] {
+    transform: translateX(40px);
+}
+
+[data-animate].visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* ========== BOOK CARD HOVER ========== */
+.book-card {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ========== BUY BUTTON PULSE ========== */
+.buy-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.buy-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.buy-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* ========== HERO BOOK CARD ========== */
+.hero-book-card {
+    transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hero-book-card:hover {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-8px);
+    box-shadow:
+        0 25px 60px -12px rgba(217, 70, 239, 0.25),
+        0 0 40px rgba(217, 70, 239, 0.1);
+}
+
+/* ========== GLASS EFFECT ========== */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ========== LINE CLAMP ========== */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ========== FORM FOCUS STATES ========== */
+input:focus,
+textarea:focus {
+    box-shadow: 0 0 0 4px rgba(217, 70, 239, 0.1);
+}
+
+/* ========== RESPONSIVE ADJUSTMENTS ========== */
+@media (max-width: 640px) {
+    .hero-book-card {
+        transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+    }
+
+    .hero-book-card:hover {
+        transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-4px);
+    }
+}
+
+/* ========== PAGE LOAD ANIMATION ========== */
+@keyframes page-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    animation: page-fade-in 0.6s ease forwards;
+}
+
+/* ========== CURSOR GLOW (DESKTOP ONLY) ========== */
+.cursor-glow {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    background: radial-gradient(circle, rgba(217, 70, 239, 0.06) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+}
+
+/* ========== TOAST NOTIFICATION ========== */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10000;
+    padding: 16px 24px;
+    border-radius: 16px;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.toast .toast-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: rgba(217, 70, 239, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+    .toast {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+    }
+}
