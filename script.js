@@ -100,11 +100,13 @@ function initCursorGlow() {
 // ========== CONTACT FORM HANDLER ==========
 const contactForm = document.getElementById("contactForm");
 
-contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    showToast("Message sent! We'll get back to you soon.");
-    contactForm.reset();
-});
+if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        showToast("Message sent! We'll get back to you soon.");
+        contactForm.reset();
+    });
+}
 
 // ========== TOAST NOTIFICATION ==========
 function showToast(message) {

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund & Cancellation Policy — BookNest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fdf4ff', 100: '#fae8ff', 200: '#f5d0fe',
+                            300: '#f0abfc', 400: '#e879f9', 500: '#d946ef',
+                            600: '#c026d3', 700: '#a21caf', 800: '#86198f', 900: '#701a75',
+                        },
+                        dark: {
+                            50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0',
+                            300: '#cbd5e1', 400: '#94a3b8', 500: '#64748b',
+                            600: '#475569', 700: '#334155', 800: '#1e293b',
+                            900: '#0f172a', 950: '#020617',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark-950 text-white font-sans antialiased">
+
+    <!-- ========== NAVBAR ========== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center shadow-lg shadow-brand-500/30 group-hover:shadow-brand-500/50 transition-shadow duration-300">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-brand-400 to-brand-200 bg-clip-text text-transparent">BookNest</span>
+                </a>
+                <div class="hidden md:flex items-center gap-1">
+                    <a href="index.html" class="px-4 py-2 rounded-xl text-sm font-medium text-dark-300 hover:text-white hover:bg-white/5 transition-all duration-300">Home</a>
+                    <a href="index.html#books" class="px-4 py-2 rounded-xl text-sm font-medium text-dark-300 hover:text-white hover:bg-white/5 transition-all duration-300">Books</a>
+                    <a href="index.html#about" class="px-4 py-2 rounded-xl text-sm font-medium text-dark-300 hover:text-white hover:bg-white/5 transition-all duration-300">About</a>
+                    <a href="index.html#contact" class="px-4 py-2 rounded-xl text-sm font-medium text-dark-300 hover:text-white hover:bg-white/5 transition-all duration-300">Contact</a>
+                </div>
+                <button id="menuBtn" class="md:hidden relative w-10 h-10 flex items-center justify-center rounded-xl hover:bg-white/10 transition-colors duration-300" aria-label="Toggle menu">
+                    <div class="hamburger-lines">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="md:hidden mobile-menu overflow-hidden">
+            <div class="px-4 pb-6 pt-2 space-y-1 bg-dark-900/95 backdrop-blur-xl border-t border-white/5">
+                <a href="index.html" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium text-dark-300 hover:text-white hover:bg-white/5 transition-all duration-300">Home</a>
+                <a href="index.html#books" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium text-dark-300 hover:text-white hover:bg-white/5 transition-all duration-300">Books</a>
+                <a href="index.html#about" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium text-dark-300 hover:text-white hover:bg-white/5 transition-all duration-300">About</a>
+                <a href="index.html#contact" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium text-dark-300 hover:text-white hover:bg-white/5 transition-all duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== CONTENT ========== -->
+    <section class="pt-32 pb-24 lg:pt-40 lg:pb-32">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider mb-6">Legal</span>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                    <span class="text-white">Refund &amp; </span>
+                    <span class="bg-gradient-to-r from-brand-400 to-purple-400 bg-clip-text text-transparent font-serif italic">Cancellation Policy</span>
+                </h1>
+                <p class="text-dark-500 text-sm">Last updated: September 2026</p>
+            </div>
+
+            <div class="space-y-8 text-dark-300 leading-relaxed">
+                <p>PracticeBook / BookNest, operated by SHIVAM PRAJAPATI, aims to provide a fair and transparent refund and cancellation process. Please read this policy carefully before making a purchase.</p>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-3">1. Cancellation Policy</h2>
+                    <p>Due to the digital nature of our products (e-books and educational materials), orders are generally processed and delivered immediately after payment confirmation. Once a digital product has been delivered to you (i.e., download access has been provided), the order cannot be canceled.</p>
+                    <p class="mt-3">If an order has been placed but the product has not yet been delivered, you may request a cancellation by contacting us at <a href="mailto:Practicekaro.it@gmail.com" class="text-brand-400 hover:text-brand-300 transition-colors">Practicekaro.it@gmail.com</a>.</p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-3">2. Refund Eligibility</h2>
+                    <p>Refunds may be considered under the following circumstances:</p>
+                    <ul class="list-disc list-inside space-y-2 text-dark-400 mt-3">
+                        <li><span class="text-white font-medium">Duplicate payment:</span> If you were charged more than once for the same order, we will refund the excess amount.</li>
+                        <li><span class="text-white font-medium">Product not delivered:</span> If payment was successful but you did not receive access to the purchased digital product, we will either provide access or issue a full refund.</li>
+                        <li><span class="text-white font-medium">Defective or corrupted product:</span> If the digital product you received is corrupted, incomplete, or significantly different from its description, we will work to resolve the issue or provide a refund.</li>
+                        <li><span class="text-white font-medium">Failed payment:</span> If your payment was deducted but the order was not placed successfully, the amount will be automatically reversed by your bank within 5-10 business days. If not, please contact us.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-3">3. Refund Process</h2>
+                    <p>To request a refund, please email us at <a href="mailto:Practicekaro.it@gmail.com" class="text-brand-400 hover:text-brand-300 transition-colors">Practicekaro.it@gmail.com</a> with the following details:</p>
+                    <ul class="list-disc list-inside space-y-2 text-dark-400 mt-3">
+                        <li>Your name</li>
+                        <li>Order details (date of purchase, product name)</li>
+                        <li>Reason for the refund request</li>
+                        <li>Payment transaction ID or receipt</li>
+                    </ul>
+                    <p class="mt-3">We will review your request and respond within 5-7 business days. If approved, the refund will be processed to the original payment method within 7-10 business days.</p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-3">4. Non-Refundable Situations</h2>
+                    <ul class="list-disc list-inside space-y-2 text-dark-400">
+                        <li>Refund requests made after the digital product has been successfully delivered and accessed</li>
+                        <li>Change of mind after purchase</li>
+                        <li>Requests made after 7 days from the date of purchase (unless required by law)</li>
+                        <li>Products purchased during promotional sales (unless the product is defective)</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-3">5. Failed Payments</h2>
+                    <p>If your payment fails or is declined, no amount will be charged to your account. If an amount is deducted but the order is not confirmed, it will be automatically reversed by your bank within 5-10 business days. If the amount is not reversed within this period, please contact us with your transaction details.</p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-3">6. Duplicate Payments</h2>
+                    <p>If you accidentally made a duplicate payment for the same product, please contact us at <a href="mailto:Practicekaro.it@gmail.com" class="text-brand-400 hover:text-brand-300 transition-colors">Practicekaro.it@gmail.com</a> with your transaction details. We will verify and refund the duplicate amount within 7-10 business days.</p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-3">7. Contact Us</h2>
+                    <p>If you have any questions about this policy or need assistance with a refund or cancellation, please contact us:</p>
+                    <p class="mt-3">
+                        <span class="text-white font-medium">PracticeBook / BookNest</span><br>
+                        Operated by: SHIVAM PRAJAPATI<br>
+                        Email: <a href="mailto:Practicekaro.it@gmail.com" class="text-brand-400 hover:text-brand-300 transition-colors">Practicekaro.it@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="relative border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                        <span class="text-lg font-bold bg-gradient-to-r from-brand-400 to-brand-200 bg-clip-text text-transparent">BookNest</span>
+                    </div>
+                    <p class="text-dark-500 text-sm mb-3">PracticeBook / BookNest is operated by SHIVAM PRAJAPATI.</p>
+                    <a href="mailto:Practicekaro.it@gmail.com" class="text-brand-400 hover:text-brand-300 text-sm transition-colors">Practicekaro.it@gmail.com</a>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="index.html" class="block text-dark-400 hover:text-white text-sm transition-colors">Home</a>
+                        <a href="index.html#books" class="block text-dark-400 hover:text-white text-sm transition-colors">Books</a>
+                        <a href="index.html#about" class="block text-dark-400 hover:text-white text-sm transition-colors">About Us</a>
+                        <a href="index.html#contact" class="block text-dark-400 hover:text-white text-sm transition-colors">Contact Us</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Legal</h4>
+                    <div class="space-y-2">
+                        <a href="privacy-policy.html" class="block text-dark-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="terms-conditions.html" class="block text-dark-400 hover:text-white text-sm transition-colors">Terms &amp; Conditions</a>
+                        <a href="refund-cancellation.html" class="block text-brand-400 text-sm">Refund &amp; Cancellation Policy</a>
+                        <a href="shipping-delivery.html" class="block text-dark-400 hover:text-white text-sm transition-colors">Shipping &amp; Delivery Policy</a>
+                        <a href="legal-information.html" class="block text-dark-400 hover:text-white text-sm transition-colors">Legal Information</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 text-center">
+                <p class="text-dark-500 text-sm">&copy; 2026 PracticeBook / BookNest. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
